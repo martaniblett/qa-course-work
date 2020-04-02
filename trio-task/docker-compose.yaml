@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+ nginx:
+   image: nginx:latest
+   ports:
+   - target: 80
+    
+  flask-app:
+   image: flask-app:latest
+   ports:
+   - target: 5000
+    
+  db:
+   image: mysql:latest
+   ports: 
+   - target: 3306
+   environment: MYSQL_ROOT_PASSWORD: root
+
+
